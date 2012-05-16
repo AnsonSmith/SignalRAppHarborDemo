@@ -56,7 +56,7 @@ namespace SignalRAppHarbor.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
+                if (model.UserName == "asmith" && model.Password == "mypass")
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
                     if (Url.IsLocalUrl(returnUrl))
